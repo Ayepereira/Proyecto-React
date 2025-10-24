@@ -2,10 +2,10 @@ import { Nav } from "../Nav/Nav";
 export const Header = () => {
     return (
     <header>
-        <h2>
-            LOGO
-        </h2>
-        <Nav></Nav>
+        <h1>
+            HAMBURGUESAS CON LA CHISPA JUSTA
+        </h1>
+        <Nav/>
 
     </header>
     );

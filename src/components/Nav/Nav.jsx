@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext/useCartContext";
-import "./Nav.css";
+
 export const Nav  = () => {
   const {getTotalItems} = useCartContext ();
     return (
@@ -16,12 +16,14 @@ export const Nav  = () => {
                     <Link to= {"/"}>Contacto</Link>
                 </li>
                 <li>
-                    <Link>Carrito </Link>
+                    <Link to={"/carrito"}>Carrito </Link>
                     {getTotalItems() > 0 && (
                         <span className="in-cart">{getTotalItems()}</span>
                     )}
+                    <span></span>
                 </li>
             </ul>
         </nav>
     );
+    
 };
