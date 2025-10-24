@@ -1,0 +1,61 @@
+[
+    {
+      "id": "1",
+      "name": "Descarga Letal",
+      "price": 7500,
+      "category": "hamburguesas",
+      "descripcion": "Triple hamburguesa, chedar, tomate, lechuga y mayonesa",
+      "imagenUrl": "/images/descarga-letal.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Doble Descarga",
+      "price": 7000,
+      "category": "hamburguesas",
+      "descripcion": "Doble hamburguesa, chedar, bacon, ketchp y cebolla",
+      "imagenUrl": "/images/doble-descarga.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Rayo del Oeste",
+      "price": 8500,
+      "category": "hamburguesas",
+      "descripcion": "Cuadruple hamburguesa, queso quedar, panceta, aderezo especial a base de ketchp y cebolla",
+      "imagenUrl": "/images/rayo-oeste.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Relampago Criollo",
+      "price": 5500,
+      "category": "hamburguesas",
+      "descripcion": "Un medallón, chedar, tomate, lechuga y mayonesa",
+      "imagenUrl": "/images/relampago-criollo.jpg"
+    },
+
+    {
+      "id": "5",
+      "name": "Relampago Supremo",
+      "price": 7500,
+      "category": "hamburguesas",
+      "descripcion": "Triple hamburguesa, chedar, bacon, ketchp y cebolla",
+      "imagenUrl": "/images/relampago-supremo.jpg"
+    },
+
+    {
+      "id": "6",
+      "name": "Simple Bacon",
+      "price": 6000,
+      "category": "hamburguesas",
+      "descripcion": "Un medallón, chedar, bacon, ketchup y cebolla",
+      "imagenUrl": "/images/simple-bacon.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Tormenta Electrica",
+      "price": 6500,
+      "category": "hamburguesas",
+      "descripcion": "Doble hamburguesa, chedar, tomate, lechuga y mayonesa",
+      "imagenUrl": "/images/tormenta-electrica.jpg"
+    }
+    
+]
