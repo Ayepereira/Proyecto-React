@@ -1,22 +1,38 @@
+/* Estilos globales básicos del App */
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1.5rem;
   text-align: center;
 }
 
-header {
-  margin-bottom: 2rem;
-  padding: 1rem 0;
-  background: linear-gradient(90deg, #000 0%, #222 100%);
-  border-bottom: 2px solid var(--main-color);
+/* TARJETAS Y ELEMENTOS */
+.card {
+  padding: 2em;
 }
 
-footer {
-  margin-top: auto;
-  padding: 1rem;
-  background-color: #000;
-  border-top: 2px solid var(--main-color);
-  color: var(--text-light);
-  font-size: 0.9rem;
+/* Botón general estilo Rayo */
+.btn-rayo {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #ffcc66; /* Amarillo */
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.05s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-rayo:hover {
+  background: #ffdd88;
+  box-shadow: 0 0 10px #ffcc66;
+}
+
+.btn-rayo:active {
+  transform: translateY(1px);
+}
+
+.btn-rayo:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

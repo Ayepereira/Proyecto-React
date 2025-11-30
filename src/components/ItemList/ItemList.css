@@ -1,0 +1,31 @@
+/* Grilla responsiva */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+    justify-items: center;
+}
+
+/* El Link debe comportarse como un bloque */
+.product-link {
+    width: 100%;
+    max-width: 300px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.product-link:hover {
+    transform: scale(1.03);
+}
+
+/* Mensaje sin productos */
+.no-products {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    grid-column: 1/-1;
+}
+

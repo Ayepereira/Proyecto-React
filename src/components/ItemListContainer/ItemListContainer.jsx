@@ -1,30 +1,25 @@
-import { useState,useEffect } from "react";
+import "./ItemListContainer.css"
+import { useState, useEffect } from "react"
 import { ItemList } from "../ItemList/ItemList";
-export const ItemListContainer = ({titulo,productos}) => {
-const [products, setProducts] = useState([])
+import { useParams } from "react-router-dom";
+import { getProducts } from "../../services/products";
 
-useEffect(()=>{
-    fetch("/data/products.json")
-    .then((res) => {
-        if (!res.ok) {
-            throw new Error("Hubo un problema al buscar productos");
-        }
-        return res.json();
-    })
-    .then((data) => {
-        setProducts(data);
-    })
-    .catch((err) => {
-        console.log(err);
-    });
-},[]);
+export const ItemListContainer = () => {
+
+    const [ products, setProducts ] = useState([]);
+    const { category } = useParams();
+
+    useEffect(() => {
+        getProducts(category)
+            .then((data) => setProducts(data))
+            .catch((error) => console.log(error));
+    }, [category]);
 
     return (
-    <section>
-        <h3>{titulo} </h3>
-        <ItemList lista={products} />
-    </section>
-
+        <section className="item-list-container"> 
+            <div className="products-wrapper">
+                <ItemList list={products} />
+            </div>
+        </section>
     );
-    
-};
+}

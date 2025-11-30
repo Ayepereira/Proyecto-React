@@ -1,0 +1,55 @@
+/* ---------- HEADER GENERAL ---------- */
+.header {
+  width: 100%;
+  background-color: #000000;      /* negro elegante */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  box-shadow: 0 3px 12px rgba(255, 0, 0, 0.25); /* sombra roja */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ---------- LOGO + TEXTO ---------- */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+}
+
+/* Logo */
+.logo-img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0px 0px 6px rgba(255, 255, 0, 0.7)); /* brillito amarillo */
+}
+
+/* Texto del slogan */
+.logo-title {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ffcc00; /* amarillo fuerte */
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 
+      2px 2px 0 #ff0000,   /* bordecito rojo */
+      4px 4px 10px rgba(255, 0, 0, 0.4); /* brillo rojo */
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 50px;
+  }
+
+  .logo-title {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}

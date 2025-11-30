@@ -1,0 +1,22 @@
+/* Contenedor general */
+.item-list-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+/* Contenedor donde está la lista */
+.products-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 1rem;
+}
+
+/* GRILLA DE PRODUCTOS */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}

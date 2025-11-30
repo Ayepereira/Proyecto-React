@@ -1,46 +1,51 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext/useCartContext";
 import "./Cart.css";
-import { Item } from "../Item/Item";
+import { Item } from "../Item/Item"
 
-export const Cart = () => { 
-    const { cart, clearCart, deleteItem, total, checkout } = useCartContext();
 
-    return (
-     <section className="item-list-container">
-        <h2>Carrito de compras</h2>
+export const Cart = () => {
+  const { cart, clearCart, deleteItem, total, checkout } = useCartContext();
 
-        {cart.length ? (
-          cart.map((prod) => (
-             <Item key={prod.id}{...prod}>
-               <span>Cantidad: {prod.quantity}</span>
-               <button className="btn" onClick={() =>deleteItem(prod.id)}>
+  return (
+    <section className="item-list-container">
+      <h2>Carrito de compras</h2>
+
+      {cart.length ? (
+        cart.map((prod) => (
+          
+            <Item key={prod.id} {...prod}>
+              <span>Cantidad: {prod.quantity}</span>
+              <button className="btn-rayo btn-rayo-cart-elimimar" onClick={() => deleteItem(prod.id)}>
                 Eliminar
-               </button>
-              </Item>
-            ))
-        ) : (
-        <p>Tu carrito está vacío</p>
-        )}
-
-        {cart.length ?(
-           <div className="btn-container">
-             <div className="total-pagar">
-               <p>Total a pagar: ${total()}</p>
-           </div>
-           <button className="btn" onClick={checkout}>
-            Finalizar compra
-           </button>
-           <button className="btn" onClick={clearCart}>
-            Vaciar carrito
-           </button>
-
-        </div>
+              </button>
+            </Item>
+          
+        ))
       ) : (
-       <Link className="btn" to="/">
-            Volver al inicio 
-       </Link> 
+        <p>Tu carrito está vacío</p>
+      )}
+
+      {cart.length ? (
+        
+            <div className="btn-container">
+              <div className="total-pagar">
+                <p>Total a pagar: ${total()}</p>
+              </div>
+              <button className="btn-rayo" onClick={checkout}>
+                Finalizar compra
+              </button>
+              <button className="btn-rayo" onClick={clearCart}>
+                Vaciar carrito
+              </button>
+            
+        </div>
+        
+      ) : (
+        <Link className="btn-rayo" to="/">
+          Volver al inicio
+        </Link>
       )}
     </section>
-    );
+  );
 };

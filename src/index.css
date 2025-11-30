@@ -1,106 +1,73 @@
 :root {
-  --main-color: #f2b705; /* amarillo rayo */
-  --accent-color: #e63946; /* rojo */
-  --bg-dark: #121212;
-  --text-light: #f1f1f1;
-  --font-main: 'Poppins', sans-serif;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --negro: #111111;
+  --rojo: #cc1d1d;
+  --amarillo: #ffcc66;
+
+  color: #ffffff;
+  background-color: var(--negro);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-main);
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
+/* LINKS */
 a {
-  color: var(--main-color);
+  font-weight: 500;
+  color: var(--amarillo);
   text-decoration: none;
-  transition: color 0.3s ease;
 }
+
 a:hover {
-  color: var(--accent-color);
+  color: #ffffff;
 }
 
-h1, h2, h3 {
-  color: var(--main-color);
-  text-shadow: 0 0 10px rgba(242, 183, 5, 0.4);
+/* BODY GENERAL */
+body {
+  margin: 0;
+  background-color: var(--negro);
 }
 
-button {
-  border: none;
+/* TITULOS */
+h1 {
+  font-size: 3.2em;
+  color: #ffffff;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* FORMULARIO DE ADMIN */
+.session-form {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.25rem 1.5rem;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  border-radius: 12px;
+  border: 1px solid var(--amarillo);
+}
+
+.session-form input[type="text"],
+.session-form input[type="password"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #444;
   border-radius: 8px;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  background-color: var(--accent-color);
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-button:hover {
-  background-color: var(--main-color);
-  color: #000;
-}
-
-article {
-  background-color: #1e1e1e;
-  border: 1px solid var(--main-color);
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1rem;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
-  transition: transform 0.2s ease;
-}
-article:hover {
-  transform: scale(1.03);
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  padding: 0.5rem;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-ul li {
-  background-color: #1f1f1f;
-  border: 1px solid var(--main-color);
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  transition: background 0.3s ease;
-}
-ul li:hover {
-  background-color: var(--accent-color);
-}
-
-.in-cart {
-  margin-left: 5px;
-  padding: 2px 8px;
-  background-color: var(--accent-color);
+  background: #333;
   color: white;
-  border-radius: 50px;
-  font-size: 0.9rem;
 }
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  .product-item img {
-    width: 130px;
-    height: 130px;
-  }
-  ul {
-    flex-direction: column;
-    align-items: center;
-  }
+
+.session-form input:focus {
+  border-color: var(--amarillo);
+}
+
+/* MAIN CONTENT */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 160px);
 }
